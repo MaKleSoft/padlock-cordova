@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Clipboard\"><param name=\"android-package\" value=\"com.verso.cordova.clipboard.Clipboard\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -19,6 +23,9 @@
     },
     "installed_plugins": {
         "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         }
     },
