@@ -5,3 +5,7 @@ padlock-header > div {
 padlock-app .view {
     padding-top: 70px;
 }
+
+padlock-shutter > padlock-header {
+    bottom: -70px;
+}
