@@ -6,6 +6,12 @@ padlock-app .view {
     padding-top: 70px;
 }
 
+padlock-app .view:not(.showing) {
+    opacity: 1;
+    z-index: auto;
+    display: none;
+}
+
 padlock-shutter > padlock-header {
     bottom: -70px;
 }
