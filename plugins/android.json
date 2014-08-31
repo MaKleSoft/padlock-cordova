@@ -15,6 +15,14 @@
                         {
                             "xml": "<feature name=\"Clipboard\"><param name=\"android-package\" value=\"com.verso.cordova.clipboard.Clipboard\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"com.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -26,6 +34,12 @@
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
         "com.verso.cordova.clipboard": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "com.ionic.keyboard": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         }
     },
