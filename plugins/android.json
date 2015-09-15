@@ -9,15 +9,19 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Clipboard\"><param name=\"android-package\" value=\"com.verso.cordova.clipboard.Clipboard\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
@@ -30,13 +34,16 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.inappbrowser": {
-            "PACKAGE_NAME": "com.maklesoft.padlock"
-        },
         "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
         "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
         "com.ionic.keyboard": {
