@@ -1,16 +1,27 @@
 {
-    "com.verso.cordova.clipboard": {
+    "cordova-plugin-crosswalk-webview": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/VersoSolutions/CordovaClipboard",
-            "subdir": "."
-        }
+            "type": "registry",
+            "id": "cordova-plugin-crosswalk-webview"
+        },
+        "is_top_level": true,
+        "variables": {}
     },
-    "org.apache.cordova.splashscreen": {
+    "ionic-plugin-keyboard": {
         "source": {
-            "type": "local",
-            "path": "/Users/martin/.plugman/cache/org.apache.cordova.splashscreen/0.3.1/package"
-        }
+            "type": "registry",
+            "id": "ionic-plugin-keyboard"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen"
+        },
+        "is_top_level": true,
+        "variables": {}
     },
     "cordova-plugin-inappbrowser": {
         "source": {
@@ -28,10 +39,11 @@
         "is_top_level": true,
         "variables": {}
     },
-    "com.ionic.keyboard": {
+    "com.verso.cordova.clipboard": {
         "source": {
-            "type": "registry",
-            "id": "com.ionic.keyboard"
+            "type": "git",
+            "url": "https://github.com/VersoSolutions/CordovaClipboard.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {}

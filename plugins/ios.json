@@ -13,11 +13,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         },
                         {
@@ -29,30 +29,6 @@
             },
             "framework": {
                 "parents": {
-                    "libz.dylib": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "CFNetwork.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "SystemConfiguration.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
-                    "MobileCoreServices.framework": [
-                        {
-                            "xml": false,
-                            "count": 1
-                        }
-                    ],
                     "CoreGraphics.framework": [
                         {
                             "xml": false,
@@ -67,16 +43,19 @@
         "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
-        "org.apache.cordova.splashscreen": {
+        "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
-        "com.ionic.keyboard": {
+        "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         }
     },
