@@ -11,3 +11,7 @@ padlock-app .view:not(.showing) {
     z-index: auto;
     display: none;
 }
+
+padlock-record-view textarea.value {
+    padding-left: 12px !important;
+}
