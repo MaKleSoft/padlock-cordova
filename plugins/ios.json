@@ -23,6 +23,10 @@
                         {
                             "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppPurchase\"><param name=\"ios-package\" value=\"InAppPurchase\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -33,6 +37,12 @@
                         {
                             "xml": false,
                             "count": 2
+                        }
+                    ],
+                    "StoreKit.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
                         }
                     ]
                 }
@@ -46,16 +56,19 @@
         "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "com.maklesoft.padlock"
-        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
         "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         }
     },

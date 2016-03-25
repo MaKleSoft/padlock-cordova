@@ -43,6 +43,10 @@
                         {
                             "xml": "<feature name=\"Clipboard\"><param name=\"android-package\" value=\"com.verso.cordova.clipboard.Clipboard\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBillingPlugin\"><param name=\"android-package\" value=\"com.smartmobilesoftware.inappbilling.InAppBillingPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -58,6 +62,22 @@
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
                             "count": 1
                         }
+                    ],
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"com.android.vending.BILLING\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/values/billing_key_param.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"billing_key_param\">XXX</string>",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -67,19 +87,23 @@
         "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.maklesoft.padlock"
-        },
         "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.maklesoft.padlock"
-        },
-        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         },
         "com.verso.cordova.clipboard": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "cc.fovea.cordova.purchase": {
+            "BILLING_KEY": "XXX",
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
         }
     },
