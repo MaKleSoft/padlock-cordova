@@ -34,8 +34,9 @@
     },
     "cc.fovea.cordova.purchase": {
         "source": {
-            "type": "registry",
-            "id": "cc.fovea.cordova.purchase"
+            "type": "git",
+            "url": "https://github.com/j3k0/cordova-plugin-purchase.git",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {

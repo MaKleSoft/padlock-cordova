@@ -992,26 +992,49 @@ store.sandbox = false;
 (function() {
     "use strict";
     store.setProductData = function(product, data) {
-        store.log.debug("android -> product data for " + product.id);
-        store.log.debug(data);
-        product.transaction = {
-            type: "android-playstore",
-            id: data.orderId,
-            purchaseToken: data.purchaseToken,
-            developerPayload: data.developerPayload,
-            receipt: data.receipt,
-            signature: data.signature
-        };
+        var transaction = data.transaction;
+        var license = data.license;
+        store.log.debug("windows -> product data for " + product.id);
+        store.log.debug(transaction);
+        store.log.debug(license);
+        if (license) {
+            product.license = {
+                type: "windows-store-license",
+                expirationDate: license.expirationDate,
+                isActive: license.isActive
+            };
+        } else {
+            license = {};
+        }
+        if (transaction) {
+            product.transaction = {
+                type: "windows-store-transaction",
+                id: transaction.transactionId,
+                offerId: transaction.offerId,
+                receipt: transaction.receiptXml
+            };
+        } else {
+            transaction = {};
+        }
         if (product.state !== store.OWNED && product.state !== store.FINISHED && product.state !== store.APPROVED) {
-            if (data.purchaseState === 0) {
+            if (transaction.status === 0) {
                 product.set("state", store.APPROVED);
+            }
+            if (transaction.status === 1 || license.isActive) {
+                product.set("state", store.OWNED);
+            }
+        }
+        if (product.state === store.INITIATED) {
+            if (transaction.status === 3) {
+                product.trigger("cancelled");
+                product.set("state", store.VALID);
             }
         }
         if (product.state === store.OWNED || product.state === store.FINISHED || product.state === store.APPROVED) {
-            if (data.purchaseState === 1) {
+            if (transaction.status === 3) {
                 product.trigger("cancelled");
                 product.set("state", store.VALID);
-            } else if (data.purchaseState === 2) {
+            } else if (transaction.status === 2) {
                 product.trigger("refunded");
                 product.set("state", store.VALID);
             }
@@ -1022,7 +1045,7 @@ store.sandbox = false;
             if (purchases && purchases.length) {
                 for (var i = 0; i < purchases.length; ++i) {
                     var purchase = purchases[i];
-                    var p = store.get(purchase.productId);
+                    var p = store.get(purchase.license.productId);
                     if (!p) {
                         store.log.warn("plugin -> user owns a non-registered product");
                         continue;
@@ -1037,7 +1060,6 @@ store.sandbox = false;
 
 if (window) {
     window.store = store;
-    store.android = store.inappbilling;
 }
 
 module.exports = store;

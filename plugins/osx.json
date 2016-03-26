@@ -24,6 +24,9 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "com.maklesoft.padlock"
+        },
+        "cc.fovea.cordova.purchase": {
+            "PACKAGE_NAME": "com.maklesoft.padlock"
         }
     },
     "dependent_plugins": {}
